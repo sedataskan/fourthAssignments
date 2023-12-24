@@ -14,7 +14,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @SpringBootApplication
-public class MainApplication {
+public class MainApplication{
     private static final Map<Integer, Integer> priceOnProducts = new HashMap<>();
     private static final BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
     private static final Order order = new Order();
@@ -31,25 +31,20 @@ public class MainApplication {
         while (!order.isClosed()){
             int cost;
 
-            String continueChoice;
-            do {
-                System.out.println("Please, select a product:" + "\n" +
-                        "1 - Motherboard" + "\n" +
-                        "2 - CPU" + "\n" +
-                        "3 - RAM" + "\n" +
-                        "4 - HDD" + "\n");
-                int choice = Integer.parseInt(reader.readLine());
-                cost = priceOnProducts.get(choice);
-                System.out.println("Count: ");
-                int count = Integer.parseInt(reader.readLine());
-                order.setTotalCost(cost * count);
-                System.out.println("Do you wish to continue selecting products? Y/N: ");
-                continueChoice = reader.readLine();
-            } while (continueChoice.equalsIgnoreCase("Y"));
+            System.out.println("Please, select a product:" + "\n" +
+                    "1 - Motherboard" + "\n" +
+                    "2 - CPU" + "\n" +
+                    "3 - RAM" + "\n" +
+                    "4 - HDD" + "\n");
+            int choice = Integer.parseInt(reader.readLine());
+            cost = priceOnProducts.get(choice);
+            System.out.println("Count: ");
+            int count = Integer.parseInt(reader.readLine());
+            order.setTotalCost(cost * count);
 
             if (strategy == null){
                 System.out.println("Please, select a payment method:" + "\n" +
-                        "1 - PalPay" + "\n" +
+                        "1 - PayPal" + "\n" +
                         "2 - Credit Card");
                 String paymentMethod = reader.readLine();
 
@@ -62,13 +57,13 @@ public class MainApplication {
 
             order.processOrder(strategy);
 
-            System.out.println("Pay " + order.getTotalCost() + " units or Continue shopping? P/C: ");
-            String proceed = reader.readLine();
-            if (proceed.equalsIgnoreCase("P")){
+            System.out.println("Pay " + order.getTotalCost() + " units? y/n: ");
+            String ans = reader.readLine();
+            if (ans.equalsIgnoreCase("y")){
                 if (strategy.pay(order.getTotalCost())){
                     System.out.println("Payment has been successful.");
                 } else {
-                    System.out.println("FAIL! Please, check your data.");
+                    System.out.println("Payment has been failed.");
                 }
                 order.setClosed();
             }
