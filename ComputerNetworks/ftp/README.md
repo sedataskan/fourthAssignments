@@ -24,15 +24,5 @@ npm install
 To run the application, execute the following command:
 
 ```
-npm electron:start
+python main.py
 ```
-
-## Built With
-
-This project is built with the following packages:
-
-| Package              | Link                                               |
-| -------------------- | -------------------------------------------------- |
-| react-text-gradients | https://www.npmjs.com/package/react-text-gradients |
-| package2             | 2.3.1                                              |
-| package3             | 0.5.2                                              |
