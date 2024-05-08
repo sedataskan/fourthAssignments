@@ -4,25 +4,20 @@ This is a simple FTP client implemented in Python. It can be used to connect to 
 
 ## Prerequisites
 
-Before you start, you need to have Python installed on your machine.
-
-## Installing
-
-To install the required dependencies, run the following command:
-
-```
-pip install -r requirements.txt
-```
-
-```
-cd frontend
-npm install
-```
+Before you start, you need to have Python 3.10, pyftpdlib, tkinter, ftplib installed on your machine.
 
 ## Running the Application
 
 To run the application, execute the following command:
 
 ```
-python main.py
+cd server
+python server.py
+```
+
+To run the frontend, execute the following command:
+
+```
+cd client
+python client.py
 ```

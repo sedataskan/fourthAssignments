@@ -19,6 +19,7 @@ class App:
 
         root.title("FTP APP | Seda Nur Taşkan - 201180004")
         root.geometry("1000x400")
+        root.resizable(False, False)
         windowWidth = root.winfo_reqwidth()
         windowHeight = root.winfo_reqheight()
         positionRight = int(root.winfo_screenwidth()/2 - windowWidth*2)
@@ -48,8 +49,7 @@ class App:
         login_button = tk.Button(
             server_frame, text="Giriş Yap", command=self.baglan)  # baglan fonksiyonu cagirilir ve sunucuya baglanilir
         login_button.pack(side="top", padx=5)
-        login_button.configure(bg="black", border=1,
-                               foreground="white", font=("Arial", 10))
+        login_button.configure(bg="LightCyan3", border=1, font=("Arial", 10))
 
         # local ve remote sunucu islemleri icin gerekli olan alanlar
         frame = tk.Frame(root)
@@ -60,7 +60,8 @@ class App:
 
         islemler = ["Dizin Oluştur", "Dizin Sil",
                     "Seçili Dizine Gir", "Önceki Dizine Git"]
-        renkler = ["green", "blue", "white", "purple"]
+        renkler = ["PaleTurquoise1", "PaleTurquoise2",
+                   "PaleTurquoise3", "PaleTurquoise4"]
         yerelFonksiyonlar = [self.dizinOlustur,
                              self.dizinSil, self.dizinGir, self.dizinDegistir]
 
@@ -110,7 +111,7 @@ class App:
 
         genelBasliklar = ["Dosya Yükle", "Dosya İndir",
                           "İsim Değiştir", "Dosya Sil"]
-        genelRenkler = ["pink", "cyan", "brown", "orange"]
+        genelRenkler = ["LightBlue1", "LightBlue2", "LightBlue3", "LightBlue4"]
         genelFonksiyonlar = [
             self.dosya_yukle, self.dosya_indir, self.dosyaAdiDegistir, self.dosyaSil]
 
