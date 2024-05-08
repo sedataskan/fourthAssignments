@@ -2,16 +2,20 @@ from pyftpdlib.authorizers import DummyAuthorizer
 from pyftpdlib.handlers import FTPHandler
 from pyftpdlib.servers import FTPServer
 
-def runServer():
-    authorizer = DummyAuthorizer()
-    authorizer.add_user("seda", "6653", ".", perm="elradfmw")
 
-    # Instantiate FTP handler class
-    handler = FTPHandler
+def runServer():
+    """
+    Uygulamayi calistirir. FTP sunucusunu baslatir.
+    """
+    authorizer = DummyAuthorizer()
+    # username, password, directory, permission
+    authorizer.add_user("seda", "6653", "files", perm="elradfmw")
+
+    handler = FTPHandler  # FTPHandler sinifindan bir nesne olusturulur.
     handler.authorizer = authorizer
 
-    # Instantiate FTP server class and listen on 0.0.0.0:21
-    server = FTPServer(("127.0.0.1", 21), handler)
-    server.serve_forever()
+    server = FTPServer(("127.0.0.1", 21), handler)  # FTP sunucusu olusturulur.
+    server.serve_forever()  # FTP sunucusunun acik kalmasi saglanir.
 
-runServer()
+
+runServer()  # Uygulama calistirilir.
