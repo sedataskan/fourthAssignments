@@ -195,7 +195,6 @@ class ChatClient:
                     else:
                         self.users[message['sender']]['messages'].append(msg)
 
-                    print(Fore.GREEN + self.users)
                     continue
 
                 self.save_db()
@@ -220,7 +219,7 @@ def main():
 def sub_main(client):
     clear_screen()
 
-    print(Fore.GREEN + f"Merhaba {client.username}".capitalize())
+    print(Fore.GREEN + f"Merhaba {client.username}")
     print("0. Çıkış")
     print("1. Kullanıcıları Listele")
     print("2. Gruplar")
@@ -268,7 +267,8 @@ def sub_main(client):
             print("0. Geri")
 
             for i in range(len(client.gruplar)):
-                print(Fore.GREEN + f"{i+1}. {client.gruplar[i]['title']}")
+                print(Fore.LIGHTGREEN_EX +
+                      f"{i+1}. {client.gruplar[i]['title']}")
 
             secim2 = input("Seçiminiz: ")
 
