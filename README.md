@@ -4,9 +4,9 @@ Gazi Üniversitesi Bilgisayar Mühendisliği Bölümü 4. sınıf kodlama ödevl
 
 ## İçerik
 
-- BM483 Tasarım Örüntüleri (Design Patterns) Sunum Ödevi - [StrategDesingPattern](https://github.com/sedataskan/fourthAssignments/tree/main/StrategyDesignPattern)
-- BM402 Bilgisaayar Ağları FTP Uygulanması - [FTP](https://github.com/sedataskan/fourthAssignments/tree/main/ComputerNetworks/ftp)
-- BM402 Bilgisaayar Ağları TCP Uygulanması - [TCP](https://github.com/sedataskan/fourthAssignments/tree/main/ComputerNetworks/tcp)
+- BM483 Tasarım Örüntüleri (Design Patterns) Sunum Ödevi - [StrategyDesingPattern](https://github.com/sedataskan/fourthAssignments/tree/main/StrategyDesignPattern)
+- BM402 Bilgisayar Ağları FTP Uygulanması - [FTP](https://github.com/sedataskan/fourthAssignments/tree/main/ComputerNetworks/ftp)
+- BM402 Bilgisayar Ağları TCP Uygulanması - [TCP](https://github.com/sedataskan/fourthAssignments/tree/main/ComputerNetworks/tcp)
 
 <br>
 
